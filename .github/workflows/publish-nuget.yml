@@ -20,6 +20,10 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '9.0'
+
+      - name: Set up NuGet authentication
+        run: dotnet nuget add source --name github --username GH_NUGET_USERNAME --password ${{ secrets.GH_NUGET_TOKEN }} --store-password-in-clear-text https://nuget.pkg.github.com/<owner>/index.json
+      
       
       # Restore dependencies
       - name: Restore dependencies
