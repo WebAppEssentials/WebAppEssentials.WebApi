@@ -4,7 +4,7 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <Version>0.1.0</Version>
+        <Version>0.1.1</Version>
         <Authors>Torsten Werner</Authors>
         <RepositoryUrl>https://github.com/WebAppEssentials/WebAppEssentials.WebApi</RepositoryUrl>
         <RootNamespace>WebAppEssentials</RootNamespace>
@@ -12,5 +12,9 @@
         <PackageId>WebAppEssentials.WebApi</PackageId>
         <Description>WebAppEssentials provides essential components for building robust and scalable ASP.NET Core applications.</Description>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="webappessentials.core" Version="0.1.1" />
+    </ItemGroup>
 
 </Project>

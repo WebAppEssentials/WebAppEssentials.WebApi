@@ -30,8 +30,14 @@ jobs:
         run: dotnet build --configuration Release --no-restore ./src/WebAppEssentials.WebApi/WebAppEssentials.WebApi.csproj
       
       # Pack the library
+      # Pack the library with version suffix based on branch
       - name: Pack NuGet Package
-        run: dotnet pack --configuration Release --no-build --output ./nupkgs ./src/WebAppEssentials.WebApi/WebAppEssentials.WebApi.csproj
+        run: |
+          if [ "$GITHUB_REF" == "refs/heads/main" ]; then
+            dotnet pack --configuration Release --no-build --output ./nupkgs ./src/WebAppEssentials.WebApi/WebAppEssentials.WebApi.csproj
+          else
+            dotnet pack --configuration Release --no-build --output ./nupkgs --version-suffix "beta" ./src/WebAppEssentials.WebApi/WebAppEssentials.WebApi.csproj
+          fi
       
       # Push to GitHub Package Registry
       - name: Publish NuGet Package
