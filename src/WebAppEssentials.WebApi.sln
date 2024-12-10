@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppEssentials.WebApi", "WebAppEssentials.WebApi\WebAppEssentials.WebApi.csproj", "{68F0C549-9E07-466B-B7E7-1A237894E8A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppEssentials.WebApi.Demo", "WebAppEssentials.WebApi.Demo\WebAppEssentials.WebApi.Demo.csproj", "{44314461-4A3B-4E0A-8DA3-F106EBD142FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{68F0C549-9E07-466B-B7E7-1A237894E8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68F0C549-9E07-466B-B7E7-1A237894E8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68F0C549-9E07-466B-B7E7-1A237894E8A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44314461-4A3B-4E0A-8DA3-F106EBD142FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44314461-4A3B-4E0A-8DA3-F106EBD142FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44314461-4A3B-4E0A-8DA3-F106EBD142FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44314461-4A3B-4E0A-8DA3-F106EBD142FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
