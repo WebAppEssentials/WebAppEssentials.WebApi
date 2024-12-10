@@ -16,13 +16,13 @@ public static class ServiceCollectionExtensions
     /// <param name="services">The service collection to add the email sender to.</param>
     /// <param name="configuration">The application's configuration.</param>
     /// <returns>The service collection with the email sender added.</returns>
-    public static IServiceCollection AddEmailSender(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddEmailService(this IServiceCollection services, IConfiguration configuration)
     {
         // Configure SMTP settings from the application's configuration.
         services.Configure<SmtpSettings>(configuration.GetSection("SmtpSettings"));
         
         // Add a scoped implementation of IEmailSender using EmailSender class.
-        services.AddScoped<IEmailSender, EmailSender>();
+        services.AddScoped<IEmailService, EmailService>();
         
         // Return the updated service collection.
         return services;

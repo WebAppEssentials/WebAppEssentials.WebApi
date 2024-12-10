@@ -3,7 +3,7 @@ namespace WebAppEssentials.Services;
 /// <summary>
 /// Defines a contract for sending emails.
 /// </summary>
-public interface IEmailSender
+public interface IEmailService
 {
     /// <summary>
     /// Sends an email asynchronously.

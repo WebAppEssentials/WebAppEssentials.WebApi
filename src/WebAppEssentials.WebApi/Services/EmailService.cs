@@ -9,8 +9,8 @@ namespace WebAppEssentials.Services;
 /// <summary>
 /// This class is responsible for sending emails using the configured SMTP settings.
 /// </summary>
-public class EmailSender(IOptions<SmtpSettings> smtpSettings,
-    ILogger<EmailSender> logger) : IEmailSender
+public class EmailService(IOptions<SmtpSettings> smtpSettings,
+    ILogger<EmailService> logger) : IEmailService
 {
     private readonly SmtpSettings _smtpSettings = smtpSettings.Value;
 
