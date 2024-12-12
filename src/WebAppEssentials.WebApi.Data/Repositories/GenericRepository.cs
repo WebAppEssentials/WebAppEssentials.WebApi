@@ -6,6 +6,7 @@ using WebAppEssentials.WebApi.Data.Extensions;
 
 namespace WebAppEssentials.WebApi.Data.Repositories;
 
+/// <inheritdoc />
 public class GenericRepository<T, TKey> : IGenericRepository<T, TKey>
     where T : class
     where TKey : IEquatable<TKey>

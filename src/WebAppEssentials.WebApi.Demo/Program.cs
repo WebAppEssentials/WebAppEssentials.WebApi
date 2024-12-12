@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using WebAppEssentials.Extensions;
+using WebAppEssentials.WebApi.Demo.Data;
 
 namespace WebAppEssentials.WebApi.Demo;
 
@@ -8,6 +10,9 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.Services.AddDbContext<DemoDbContext>(options =>
+            options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+        
         // Add services to the container.
         builder.Services.AddAuthorization();
 
@@ -21,6 +26,8 @@ public class Program
         {
             app.MapOpenApi();
         }
+        
+        app.ApplyMigrations<DemoDbContext>();
 
         app.UseGlobalExceptionHandling();
 

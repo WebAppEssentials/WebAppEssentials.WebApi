@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using WebAppEssentials.Middlewares;
+using WebAppEssentials.WebApi.Data;
 
 namespace WebAppEssentials.Extensions;
 
@@ -16,5 +19,15 @@ public static class ApplicationBuilderExtensions
     public static void UseGlobalExceptionHandling(this IApplicationBuilder app)
     {
         app.UseMiddleware<ExceptionHandlingMiddleware>();
+    }
+    
+    public static void ApplyMigrations<TContext>(this WebApplication app) where TContext : BaseDbContext
+    {
+        // Automatically apply migrations
+        using (var scope = app.Services.CreateScope())
+        {
+            var dbContext = scope.ServiceProvider.GetRequiredService<TContext>();
+            dbContext.Database.Migrate(); // Applies pending migrations
+        }
     }
 }
