@@ -1,6 +1,6 @@
 using WebAppEssentials.Models;
 
-namespace WebAppEssentials.WebApi.Data.Repositories;
+namespace WebAppEssentials.Repositories;
 
 /// <summary>
 /// Defines a generic repository interface for CRUD operations on entities of type T with a unique identifier of type TKey.

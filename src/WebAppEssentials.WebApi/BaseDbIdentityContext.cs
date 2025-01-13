@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using WebAppEssentials.WebApi.Data.Entities;
+using WebAppEssentials.Entities;
 
-namespace WebAppEssentials.WebApi.Data;
+namespace WebAppEssentials;
 
 public class BaseDbIdentityContext : IdentityDbContext<AppUser>
 {

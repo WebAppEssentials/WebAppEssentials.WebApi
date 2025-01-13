@@ -1,9 +1,9 @@
 using FluentAssertions;
 using WebAppEssentials.Enums;
-using WebAppEssentials.WebApi.Data.Extensions;
-using WebAppEssentials.WebApi.Data.Tests.TestSetup;
+using WebAppEssentials.Extensions;
+using WebAppEssentials.WebApi.Tests.TestSetup;
 
-namespace WebAppEssentials.WebApi.Data.Tests.Extensions;
+namespace WebAppEssentials.WebApi.Tests.Extensions;
 
 public class QueryableExtensionsTests
 {

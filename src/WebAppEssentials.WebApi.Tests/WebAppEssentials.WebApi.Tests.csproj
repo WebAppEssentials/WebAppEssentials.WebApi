@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\WebAppEssentials.WebApi.Data\WebAppEssentials.WebApi.Data.csproj" />
+      <ProjectReference Include="..\WebAppEssentials.WebApi\WebAppEssentials.WebApi.csproj" />
     </ItemGroup>
 
 </Project>

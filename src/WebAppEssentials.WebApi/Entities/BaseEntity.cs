@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace WebAppEssentials.WebApi.Data.Entities;
+namespace WebAppEssentials.Entities;
 
 /// <summary>
 /// Represents a base entity with common properties such as Id, CreatedBy, Created, ModifiedBy, and Modified.

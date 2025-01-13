@@ -1,10 +1,10 @@
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
+using WebAppEssentials.Extensions;
 using WebAppEssentials.Models;
-using WebAppEssentials.WebApi.Data.Extensions;
 
-namespace WebAppEssentials.WebApi.Data.Repositories;
+namespace WebAppEssentials.Repositories;
 
 /// <inheritdoc />
 public class GenericRepository<T, TKey> : IGenericRepository<T, TKey>

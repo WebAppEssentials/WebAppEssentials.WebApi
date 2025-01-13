@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using WebAppEssentials.WebApi.Data;
 
 namespace WebAppEssentials.WebApi.Demo.Data;
 

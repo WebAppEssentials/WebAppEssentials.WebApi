@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 
-namespace WebAppEssentials.WebApi.Data.Entities;
+namespace WebAppEssentials.Entities;
 
 /// <summary>
 /// Represents a user in the application.

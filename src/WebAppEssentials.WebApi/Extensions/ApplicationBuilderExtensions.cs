@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using WebAppEssentials.Middlewares;
-using WebAppEssentials.WebApi.Data;
 
 namespace WebAppEssentials.Extensions;
 

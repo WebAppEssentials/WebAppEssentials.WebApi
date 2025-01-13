@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
 using WebAppEssentials.Enums;
 
-namespace WebAppEssentials.WebApi.Data.Extensions;
+namespace WebAppEssentials.Extensions;
 
 public static class QueryableExtensions
 {

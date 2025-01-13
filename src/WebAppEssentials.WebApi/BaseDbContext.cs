@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace WebAppEssentials.WebApi.Data;
+namespace WebAppEssentials;
 
 public class BaseDbContext(DbContextOptions options) : DbContext(options)
 {
