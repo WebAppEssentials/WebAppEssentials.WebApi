@@ -29,4 +29,14 @@ public static class ApplicationBuilderExtensions
             dbContext.Database.Migrate(); // Applies pending migrations
         }
     }
+    
+    public static void ApplyMigrationsIdentity<TContext>(this WebApplication app) where TContext : BaseDbIdentityContext
+    {
+        // Automatically apply migrations
+        using (var scope = app.Services.CreateScope())
+        {
+            var dbContext = scope.ServiceProvider.GetRequiredService<TContext>();
+            dbContext.Database.Migrate(); // Applies pending migrations
+        }
+    }
 }
