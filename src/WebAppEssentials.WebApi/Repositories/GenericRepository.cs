@@ -7,14 +7,15 @@ using WebAppEssentials.Models;
 namespace WebAppEssentials.Repositories;
 
 /// <inheritdoc />
-public class GenericRepository<T, TKey> : IGenericRepository<T, TKey>
+public class GenericRepository<T, TKey, TContext> : IGenericRepository<T, TKey>
     where T : class
     where TKey : IEquatable<TKey>
+    where TContext : DbContext
 {
-    protected readonly BaseDbContext Context;
+    protected readonly TContext Context;
     protected readonly IMapper Mapper;
 
-    protected GenericRepository(BaseDbContext context, IMapper mapper)
+    protected GenericRepository(TContext context, IMapper mapper)
     {
         Context = context;
         Mapper = mapper;
